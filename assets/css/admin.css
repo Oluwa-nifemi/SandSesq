@@ -1,0 +1,480 @@
+@font-face {
+    font-family: 'open_sansbold';
+    src: url(../fonts/open-sans-fontfacekit/opensans_bold/OpenSans-Bold-webfont.woff);
+}
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_bolditalic/OpenSans-BoldItalic-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url(../fonts/open-sans-fontfacekit/opensans_extrabold/OpenSans-ExtraBold-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_extrabolditalic/OpenSans-ExtraBoldItalic-webfont.woff);
+}
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_italic/OpenSans-Italic-webfont.woff);
+}
+@font-face {
+    font-family: 'open_sanslight';
+    src: url(../fonts/open-sans-fontfacekit/opensans_light/OpenSans-Light-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_lightitalic/OpenSans-LightItalic-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url(../fonts/open-sans-fontfacekit/opensans_regular/OpenSans-Regular-webfont.woff)
+}
+@font-face{
+    font-family: 'open_sanssemibold';
+    src: url(../fonts/open-sans-fontfacekit/opensans_semibold/OpenSans-Semibold-webfont.woff)
+}
+@font-face{
+    font-family: 'open_sanssemibold_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_semibolditalic/OpenSans-SemiboldItalic-webfont.woff)
+}
+*{
+    box-sizing: border-box;
+}
+:focus{
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:visited{
+    color: inherit;
+}
+button{
+    cursor: pointer;
+}
+nav{
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    z-index: 2;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+}
+nav.active{
+    background-color: #ccb4a080;
+}
+nav ul#large-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    list-style-type: none;
+    height: 100%;
+    align-items: center;
+    padding-right: 5%;
+    font-family: open_sanslight, sans-serif;
+}
+nav ul#large-nav li{
+    font-size: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+nav ul#large-nav li:hover{
+    border-bottom: 1px solid rgba(0,0,0,1);
+}
+#navsmall{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0,0,0,0.5);
+    right: 0;
+}
+#navsmall ul{
+    list-style-type: none;
+    color: white;
+    padding: 10px 0;
+    font-family: open_sanslight,sans-serif;
+}
+#navsmall ul li{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2em;
+    width: 50%;
+    margin: auto;
+}
+#navsmall ul li:hover{
+    border-bottom: 1px solid white;
+}
+#navsmallbtn{
+    display: none;
+    float: right;
+}
+#navsmallbtn,#navsmall button{
+    border: none;
+    background: transparent;
+    padding: 15px;
+}
+#navsmallbtn.active{
+    display: none;
+}
+#navsmallbtn img,#navsmall button img{
+    width: 25px;
+}
+#navsmall button{
+    position: absolute;
+    padding: 20px 30px;
+}
+.header{
+    font-size: 3em;
+    font-family: open_sansregular,sans-serif;
+    text-align: center;
+}
+#about{
+    display: flex;
+    font-family: open_sanslight, sans-serif;
+}
+#about div{
+    padding: 20px;
+}
+#about h2{
+    margin: 10px 0;
+    text-align: center;
+}
+#about-img{
+    flex: 1;
+}
+#about-img img{
+    width: 100%;
+    height: 400px;
+}
+#about-desc{
+    flex: 2;
+}
+#about-desc h2{
+    height: 8%;
+}
+#about-desc div{
+    font-size: 20px;
+}
+#edit-desc{
+    float: right;
+    font-size: 1em;
+    padding: 0 20px;
+}
+#edit-desc.edit{
+    display: none;
+}
+#about-desc.edit div{
+    display: none;
+}
+#about-desc.edit form{
+    display: block;
+}
+#about-desc div button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#about-desc div,#about-desc form{
+    height: 82%;
+    padding: 10px;
+}
+#about-desc form{
+    height: 90%;
+    display: none;
+}
+#about-desc textarea{
+    height: 85%;
+    width: 100%;
+    font-size: 1.5em;
+    font-family: open_sansregular,sans-serif;
+    margin-bottom: 1%;
+}
+#about-desc button{
+    border: 1px solid grey;
+    background-color: white;
+    font-size: 1.2em;
+    font-family: open_sanslight,sans-serif;
+    float: right;
+    border-radius: 5px;
+    transition: all 0.5s;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+#change_image label{
+    display: block;
+    font-size: 1.5em;
+}
+#change_image button:hover,#about-desc button:hover{
+    transform: scale(1.2);
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+}
+#change_image{
+    margin: 15px 0;
+}
+#change_image input{
+    font-family: open_sanslight,sans-serif;
+    font-size: 1em;
+}
+#change_image button{
+    background: transparent;
+    width: 100px;
+    border: 1px solid grey;
+    height: 30px;
+    font-family: open_sanslight,sans-serif;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: all 500ms;
+    margin: 10px 0;
+}
+#sandals{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 50px 5%;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+#sandals div{
+    position: relative;
+    height: 400px;
+}
+#sandals div button{
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    right: 7px;
+    z-index: 2;
+}
+#sandals img{
+    width: 100%;
+    height: 100%;
+}
+#upload_sandal{
+    grid-column: 1/4;
+}
+#upload_sandal label{
+    display: block;
+    font-size: 1.5em;
+    font-family: open_sansregular,sans-serif;
+}
+#upload_sandal input{
+    font-size: 1.2em;
+    font-family: open_sanslight,sans-serif;
+    margin: 10px 0;
+    display: block;
+}
+#upload_sandal button{
+    border: 1px solid grey;
+    background-color: white;
+    font-size: 1em;
+    font-family: open_sanslight,sans-serif;
+    border-radius: 5px;
+    transition: all 0.5s;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+#upload_sandal button:hover{
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    transform: scale(1.2);
+}
+#reviews{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 50px 5%;
+    font-family: opensans_light,sans-serif;
+}
+#reviews .item div{
+    font-size: 1.3em;
+    border: 1px solid grey;
+    min-height: 250px;
+    height: fit-content;
+    padding: 10px 30px 10px 20px;
+    font-family: open_sansregular,sans-serif;
+    border-radius: 12px;
+    position: relative;
+}
+#reviews .item div button{
+    width: 40px;
+    position: absolute;
+    right: 0;
+    height: 40px;
+    border : none;
+    background: transparent;
+    opacity: 0.5;
+    transition: all 500ms;
+}
+#reviews .item div button:hover{
+    opacity: 1;
+}
+#reviews .item div button:not(.item-edit){
+    top: 0;
+}
+#reviews .item div button.item-edit{
+    bottom: 5px;
+}
+#reviews .item button img{
+    width: 100%;
+}
+#reviews .item form,#add_review{
+    display: none;
+    height: 250px;
+    font-family: open_sansregular,sans-serif;
+}
+#reviews .item form label,#add_review label{
+    display: block;
+    font-size: 1.5em;
+}
+#reviews .item form textarea,#add_review textarea{
+    width: 100%;
+    height: 70%;
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+#reviews .item form button,#add_review button{
+    width: 35px;
+    height: 35px;
+    border : 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    background: transparent;
+    transition: all 500ms;
+    float: right;
+    margin-left: 5px;
+    display: flex;
+}
+#reviews .item form button:hover,#add_review button:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+#reviews .item form button img,#add_review button img{
+    width: 100%;
+}
+#reviews .item.edit div,#reviews div:last-child.edit div{
+    display: none;
+}
+#reviews .item.edit form,#reviews div:last-child.edit form{
+    display: block;
+}
+#reviews div:last-child div{
+    border: none;
+    display: flex;
+    font-size: 1.3em;
+    min-height: 250px;
+    height: fit-content;
+    padding: 10px;
+    font-family: open_sansregular,sans-serif;
+    border-radius: 12px;
+    position: relative;
+    justify-content: center;
+}
+#reviews div:last-child div button{
+    background-color: transparent;
+    border: none;
+}
+#reviews div:last-child div button img:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+#reviews div:last-child div img{
+    height: 200px;
+    margin: auto;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 45px;
+    transition: all 500ms;
+}
+#contact{
+    font-family: open_sansregular,sans-serif;
+    font-size: 1.5em;
+}
+#contact div{
+    padding: 30px 5%;
+    border-top: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+#copyright{
+    text-align: center;
+    font-family: open_sanslight_italic,sans-serif;
+    font-size: 1.5em;
+}
+@media (max-width: 800px){
+    #sandals,#reviews{
+        grid-template-columns: 1fr 1fr;
+    }
+    #upload_sandal{
+        grid-column: 1/3;
+    }
+}
+@media(max-width: 600px) {
+    nav{
+        height: 7vh;
+    }
+    nav ul#large-nav {
+        display: none;
+    }
+    #navsmallbtn {
+        display: block;
+        position: fixed;
+        right: 0;
+    }
+    #navsmall.active {
+        display: block;
+    }
+    nav.active {
+        height: 9.5vh;
+    }
+    #sandals,#reviews{
+        grid-template-columns: 1fr;
+    }
+    #upload_sandal{
+        grid-column: 1/2;
+    }
+    #about{
+        flex-direction: column;
+    }
+    #about-desc textarea{
+        height: 200px   ;
+    }
+}
+@media (max-width: 400px){
+    #add_review textarea{
+        margin-top: 0;
+    }
+    #navsmall{
+        width: 70%;
+    }
+    #sandals img{
+        width: 85%;
+        height: 95%;
+    }
+    #sandals div button{
+        right: 30px;
+        top: 5px;
+    }
+    #sandals{
+        padding: 0;
+    }
+    #sandals div{
+        display: flex;
+    }
+    #sandals div img{
+        margin: auto;
+    }
+    #upload_sandal{
+        width: 80%;
+        margin: auto;
+    }
+}
