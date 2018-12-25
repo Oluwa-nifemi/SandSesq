@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'open_sansbold';
+    src: url(../fonts/open-sans-fontfacekit/opensans_bold/OpenSans-Bold-webfont.woff);
+}
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_bolditalic/OpenSans-BoldItalic-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url(../fonts/open-sans-fontfacekit/opensans_extrabold/OpenSans-ExtraBold-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_extrabolditalic/OpenSans-ExtraBoldItalic-webfont.woff);
+}
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_italic/OpenSans-Italic-webfont.woff);
+}
+@font-face {
+    font-family: 'open_sanslight';
+    src: url(../fonts/open-sans-fontfacekit/opensans_light/OpenSans-Light-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_lightitalic/OpenSans-LightItalic-webfont.woff)
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url(../fonts/open-sans-fontfacekit/opensans_regular/OpenSans-Regular-webfont.woff)
+}
+@font-face{
+    font-family: 'open_sanssemibold';
+    src: url(../fonts/open-sans-fontfacekit/opensans_semibold/OpenSans-Semibold-webfont.woff)
+}
+@font-face{
+    font-family: 'open_sanssemibold_italic';
+    src: url(../fonts/open-sans-fontfacekit/opensans_semibolditalic/OpenSans-SemiboldItalic-webfont.woff)
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+form{
+    font-family: open_sansregular,sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    height: 100vh;
+    width: 50vw;
+    margin: auto;
+}
+.form-group{
+    margin: 10px 0;
+}
+.form-group label{
+    display: inline-block;
+    width: 25%;
+    font-size: 1.9em;
+    vertical-align: bottom;
+}
+.form-group input{
+    height: 35px;
+    width: 73%;
+    font-size: 1.3em;
+}
+form button{
+    height: 50px;
+    width: 150px;
+    margin-left: auto;
+    background-color: transparent;
+    border: 1px solid grey;
+    font-family: open_sanslight,sans-serif;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+form button:hover{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+#errors{
+    font-family: open_sanslight_italic,sans-serif;
+    font-size: 1.5em;
+    color: #ff3e3e;
+}
