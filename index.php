@@ -7,7 +7,7 @@
  */
 session_start();
 
-$db = mysqli_connect('localhost','root','','sandsesq');
+$db = mysqli_connect('us-cdbr-iron-east-01.cleardb.net','be19cbdc234d44','eb807cf4','heroku_ffc1f7613441892');
 $bioresult = mysqli_query($db,'SELECT * FROM bio');
 $bioarray = mysqli_fetch_assoc($bioresult);
 
