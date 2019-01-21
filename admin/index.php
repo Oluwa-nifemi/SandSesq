@@ -7,9 +7,9 @@
  */
 session_start();
 $db = mysqli_connect('us-cdbr-iron-east-01.cleardb.net','be19cbdc234d44','eb807cf4','heroku_ffc1f7613441892');
-if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']){
-    header('Location: login.php');
-}
+//if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']){
+  //  header('Location: login.php');
+//}
 if($_GET){
     extract($_GET);
     if($mode == 'sandals'){
